@@ -1,0 +1,36 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Selenium RestAssured Tests Suite" verbose="1">
+
+    <test name="Selenium Take Home Test">
+        <classes>
+            <class name="com.objevsoft.qa.PracticeTest">
+            	<methods>
+            		<exclude name="testMethod2"></exclude>
+            		<include name="testMethod1"></include>
+            		<include name="testMethod3"></include>
+            		<include name="testMethod4"></include>
+            	</methods>
+            </class>
+        </classes>
+    </test>
+    <test name="TestNg Grouping Test">
+    	<groups>
+    		<run>
+    			<!-- <include name="TestB"></include> -->
+    			<include name="TestD"></include>
+    			<!-- <include name="TestA"></include> -->
+    			<exclude name="TestC"></exclude>
+    		</run>
+    	</groups>
+        <classes>
+            <class name="com.objevsoft.qa.BasicTestNGFetureTest" />
+        </classes>
+    </test>
+	<test name="RestAssured Test">
+    	<classes>
+            <class name="com.objevsoft.qa.APITest" />
+        </classes>
+   	</test>
+	
+</suite>
